@@ -60,7 +60,6 @@
 /drush
 /drupal.phar
 /drupal
-.ddev/
 .editorconfig
 .gitattributes
 .idea/
