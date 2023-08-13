@@ -1,0 +1,28 @@
+uuid: 8ead66bd-0933-47a7-b86e-644d1ddca425
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testcontent_type_sync.body
+    - node.type.testcontent_type_sync
+  module:
+    - text
+    - user
+id: node.testcontent_type_sync.default
+targetEntityType: node
+bundle: testcontent_type_sync
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
