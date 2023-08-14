@@ -23,7 +23,7 @@ services:
             COLUMNS: "186"
             DDEV_DATABASE: mariadb:10.4
             DDEV_HOSTNAME: dream-hotel.ddev.site
-            DDEV_PHP_VERSION: "8.0"
+            DDEV_PHP_VERSION: "8.1"
             DDEV_PRIMARY_URL: http://dream-hotel.ddev.site
             DDEV_PROJECT: dream-hotel
             DDEV_PROJECT_TYPE: drupal9
@@ -67,7 +67,6 @@ services:
             - host_ip: 127.0.0.1
               mode: ingress
               protocol: tcp
-              published: "61701"
               target: 3306
         restart: "no"
         stop_grace_period: 1m0s
@@ -125,7 +124,7 @@ services:
         build:
             args:
                 BASE_IMAGE: drud/ddev-webserver:v1.21.5
-                DDEV_PHP_VERSION: "8.0"
+                DDEV_PHP_VERSION: "8.1"
                 gid: "20"
                 uid: "501"
                 username: mac
@@ -142,7 +141,7 @@ services:
             DDEV_FILES_DIR: /var/www/html/web/sites/default/files
             DDEV_HOSTNAME: dream-hotel.ddev.site
             DDEV_MUTAGEN_ENABLED: "false"
-            DDEV_PHP_VERSION: "8.0"
+            DDEV_PHP_VERSION: "8.1"
             DDEV_PRIMARY_URL: http://dream-hotel.ddev.site
             DDEV_PROJECT: dream-hotel
             DDEV_PROJECT_TYPE: drupal9
@@ -242,4 +241,3 @@ volumes:
     ddev-ssh-agent_socket_dir:
         external: true
         name: ddev-ssh-agent_socket_dir
-
