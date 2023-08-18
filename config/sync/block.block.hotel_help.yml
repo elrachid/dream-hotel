@@ -1,0 +1,22 @@
+uuid: e444a16b-a506-41d2-bb1f-7d3dbc73c177
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - hotel
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: hotel_help
+theme: hotel
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: 55ec4c55-1758-4a6c-9ce7-879123575241
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.room_display
+label: 'Room display'
+targetEntityType: node
+cache: true

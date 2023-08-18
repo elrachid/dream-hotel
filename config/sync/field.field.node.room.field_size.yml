@@ -1,0 +1,24 @@
+uuid: cac05472-ef11-4d7c-9719-a5698ee49ae2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_size
+    - node.type.room
+  module:
+    - text
+id: node.room.field_size
+field_name: field_size
+entity_type: node
+bundle: room
+label: Size
+description: 'The dimensions of the room.'
+required: false
+translatable: false
+default_value:
+  -
+    value: '5*5'
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

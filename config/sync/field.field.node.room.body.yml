@@ -1,17 +1,17 @@
-uuid: bf77d21f-b525-4825-ad3f-f73daedccb76
+uuid: 1f37453a-92f3-49e3-b1cd-59bbb5ef9563
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.testcontent_type_sync
+    - node.type.room
   module:
     - text
-id: node.testcontent_type_sync.body
+id: node.room.body
 field_name: body
 entity_type: node
-bundle: testcontent_type_sync
-label: Body
+bundle: room
+label: Description
 description: ''
 required: false
 translatable: true

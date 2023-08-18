@@ -1,0 +1,18 @@
+uuid: 6e048431-cc0d-4cc5-8716-cce9c6d0d89f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Reservation
+type: reservation
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

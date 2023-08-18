@@ -1,17 +1,17 @@
-uuid: 23fa0381-8eb6-48d3-8dd9-be27fb526fc6
+uuid: 82043a0e-5d70-4c57-a07b-94ae0fb4a311
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.testcontent_type_sync.body
-    - node.type.testcontent_type_sync
+    - field.field.node.reservation.body
+    - node.type.reservation
   module:
     - text
     - user
-id: node.testcontent_type_sync.teaser
+id: node.reservation.teaser
 targetEntityType: node
-bundle: testcontent_type_sync
+bundle: reservation
 mode: teaser
 content:
   body:

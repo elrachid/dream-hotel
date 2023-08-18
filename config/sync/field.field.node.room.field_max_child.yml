@@ -1,0 +1,23 @@
+uuid: 16f342cc-9153-4c94-9438-dc8ffa36e3e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_max_child
+    - node.type.room
+id: node.room.field_max_child
+field_name: field_max_child
+entity_type: node
+bundle: room
+label: 'Max Child'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 8
+  prefix: ''
+  suffix: ''
+field_type: integer

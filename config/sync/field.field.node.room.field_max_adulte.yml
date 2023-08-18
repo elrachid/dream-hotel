@@ -1,0 +1,23 @@
+uuid: d8803e56-ef52-4443-b9e4-7014d35ebd58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_max_adulte
+    - node.type.room
+id: node.room.field_max_adulte
+field_name: field_max_adulte
+entity_type: node
+bundle: room
+label: 'Max adulte'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 8
+  prefix: ''
+  suffix: ''
+field_type: integer

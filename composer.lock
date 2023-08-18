@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67a244b746e3c1ad8b9b82b9d5b3cc65",
+    "content-hash": "4c2f505b17b4de14f18b5732e623935d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3309,6 +3309,56 @@
             }
         },
         {
+            "name": "drupal/orange_ecom_starter",
+            "version": "dev-2.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/orange_ecom_starter.git",
+                "reference": "ce33a2cc509c29b4d2eb6462b2d074bcc99e29c2"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9",
+                "drupal/twig_tweak": "^2.6"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
+                "drupal": {
+                    "version": "2.0.x-dev",
+                    "datestamp": "1610033589",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "DerekCresswell",
+                    "homepage": "https://www.drupal.org/user/3617358"
+                },
+                {
+                    "name": "joshmiller",
+                    "homepage": "https://www.drupal.org/user/315047"
+                },
+                {
+                    "name": "smccabe",
+                    "homepage": "https://www.drupal.org/user/289245"
+                }
+            ],
+            "description": "A starting theme for Drupal E-Commerce projects.",
+            "homepage": "https://drupal.org/project/orange_ecom_starter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/orange_ecom_starter"
+            }
+        },
+        {
             "name": "drupal/profile",
             "version": "1.7.0",
             "source": {
@@ -3540,6 +3590,59 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/twig_tweak",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/twig_tweak.git",
+                "reference": "8.x-2.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_tweak-8.x-2.10.zip",
+                "reference": "8.x-2.10",
+                "shasum": "02877fcf73744d06f1a10280ce07ea55c38d238f"
+            },
+            "require": {
+                "drupal/core": "^8.7 || ^9.0",
+                "twig/twig": "^1.41 || ^2.12"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Better dump() function for debugging Twig variables"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.10",
+                    "datestamp": "1663947949",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Chi",
+                    "homepage": "https://www.drupal.org/user/556138"
+                }
+            ],
+            "description": "A Twig extension with some useful functions and filters for Drupal development.",
+            "homepage": "https://www.drupal.org/project/twig_tweak",
+            "keywords": [
+                "Drupal",
+                "Twig"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/twig_tweak",
+                "issues": "https://www.drupal.org/project/issues/twig_tweak"
             }
         },
         {
@@ -8279,7 +8382,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "drupal/commerce_invoice": 5,
-        "drupal/inline_entity_form": 5
+        "drupal/inline_entity_form": 5,
+        "drupal/orange_ecom_starter": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

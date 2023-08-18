@@ -1,4 +1,4 @@
-uuid: 938587ac-ca50-4d0b-9694-e3c9d2002233
+uuid: af14e326-6737-4f2b-910c-fc6789f0009d
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'testcontent Type sync'
-type: testcontent_type_sync
+name: Room
+type: room
 description: ''
 help: ''
 new_revision: true

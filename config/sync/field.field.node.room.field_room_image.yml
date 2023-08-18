@@ -1,0 +1,38 @@
+uuid: 19d079d9-35cb-40c4-9ed1-46a1c4b66109
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_image
+    - node.type.room
+  module:
+    - image
+id: node.room.field_room_image
+field_name: field_room_image
+entity_type: node
+bundle: room
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: a25a7715-33d6-4f95-8a25-1c181547c5b8
+    alt: ''
+    title: ''
+    width: 950
+    height: 650
+field_type: image

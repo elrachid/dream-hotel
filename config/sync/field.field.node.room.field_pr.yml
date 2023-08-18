@@ -1,0 +1,21 @@
+uuid: 1468bc8a-b597-46c8-8e6e-087e063abaf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pr
+    - node.type.room
+id: node.room.field_pr
+field_name: field_pr
+entity_type: node
+bundle: room
+label: PR
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

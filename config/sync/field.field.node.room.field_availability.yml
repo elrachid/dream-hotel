@@ -1,0 +1,23 @@
+uuid: 092f9157-a7d7-4d62-9279-4d4c71f6fc16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_availability
+    - node.type.room
+id: node.room.field_availability
+field_name: field_availability
+entity_type: node
+bundle: room
+label: Availability
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

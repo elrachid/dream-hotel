@@ -1,0 +1,19 @@
+uuid: 647acb37-53a3-4c0c-a97a-8c2b616da41e
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_payment_example
+id: dream_hotel_gateway
+label: 'Dream Hotel gateway'
+weight: null
+plugin: example_stored_offsite_redirect
+configuration:
+  display_label: 'Dream Hotel Stored Offsite'
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  redirect_method: post
+conditions: {  }
+conditionOperator: AND

@@ -1,0 +1,22 @@
+uuid: e30fb4b5-d19f-404c-8939-aa26e2ed2809
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hotel
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: hotel_powered
+theme: hotel
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

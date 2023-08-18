@@ -1,0 +1,20 @@
+uuid: 53443cdd-6189-4f59-9f66-6659b6237e5e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hotel
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: hotel_page_title
+theme: hotel
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

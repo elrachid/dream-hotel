@@ -27,6 +27,7 @@
         "drupal/devel_entity_updates": "^4.1",
         "drupal/entity": "^1.4",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/orange_ecom_starter": "2.0.x-dev@dev",
         "drupal/webform": "^6.1",
         "drush/drush": "^11.6"
     },

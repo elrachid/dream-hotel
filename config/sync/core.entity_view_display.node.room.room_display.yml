@@ -1,0 +1,99 @@
+uuid: 0c212fb5-8efe-41cb-893e-c0a485b31e8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.room_display
+    - field.field.node.room.body
+    - field.field.node.room.field_additional_notes
+    - field.field.node.room.field_amenities
+    - field.field.node.room.field_availability
+    - field.field.node.room.field_bed_types
+    - field.field.node.room.field_capacity
+    - field.field.node.room.field_floor
+    - field.field.node.room.field_max_adulte
+    - field.field.node.room.field_max_child
+    - field.field.node.room.field_pr
+    - field.field.node.room.field_price
+    - field.field.node.room.field_promotion
+    - field.field.node.room.field_prz
+    - field.field.node.room.field_rate_
+    - field.field.node.room.field_room_image
+    - field.field.node.room.field_room_number
+    - field.field.node.room.field_room_type
+    - field.field.node.room.field_size
+    - image.style.large
+    - node.type.room
+  module:
+    - image
+    - text
+    - user
+id: node.room.room_display
+targetEntityType: node
+bundle: room
+mode: room_display
+content:
+  body:
+    type: text_trimmed
+    label: above
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_room_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: large
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_room_number:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_room_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_additional_notes: true
+  field_amenities: true
+  field_availability: true
+  field_bed_types: true
+  field_capacity: true
+  field_floor: true
+  field_max_adulte: true
+  field_max_child: true
+  field_pr: true
+  field_promotion: true
+  field_prz: true
+  field_rate_: true
+  field_size: true

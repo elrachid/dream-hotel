@@ -1,0 +1,23 @@
+uuid: b89ec07d-eb08-4f6b-ad52-d5badabfbbd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion
+    - node.type.room
+id: node.room.field_promotion
+field_name: field_promotion
+entity_type: node
+bundle: room
+label: Promotion
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

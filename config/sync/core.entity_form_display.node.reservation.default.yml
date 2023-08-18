@@ -1,16 +1,16 @@
-uuid: 02432ced-b7fc-489c-b975-9d85ea03cc3e
+uuid: 71024c1f-5673-41e3-979a-ec739ccd7a4b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.testcontent_type_sync.body
-    - node.type.testcontent_type_sync
+    - field.field.node.reservation.body
+    - node.type.reservation
   module:
     - path
     - text
-id: node.testcontent_type_sync.default
+id: node.reservation.default
 targetEntityType: node
-bundle: testcontent_type_sync
+bundle: reservation
 mode: default
 content:
   body:

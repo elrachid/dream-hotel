@@ -1,0 +1,8 @@
+uuid: b975f51b-bbeb-440c-a391-be43f65a4d24
+langcode: en
+status: true
+dependencies: {  }
+name: 'Room Type'
+vid: room_type
+description: 'The type of room (e.g., single, double, suite).'
+weight: 0

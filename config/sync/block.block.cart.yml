@@ -1,0 +1,21 @@
+uuid: 0331a45b-a5c4-41f2-9429-dec7a7923881
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - hotel
+id: cart
+theme: hotel
+region: content
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  label_display: visible
+  provider: commerce_cart
+  dropdown: true
+visibility: {  }

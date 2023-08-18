@@ -1,0 +1,18 @@
+uuid: a74d3171-f3d9-469e-9adf-f671f2342c37
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_promotion
+field_name: field_promotion
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

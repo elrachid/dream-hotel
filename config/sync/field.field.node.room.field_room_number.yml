@@ -1,0 +1,23 @@
+uuid: ff8fb4ba-e86d-4c76-8512-2cef888ea6ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_number
+    - node.type.room
+id: node.room.field_room_number
+field_name: field_room_number
+entity_type: node
+bundle: room
+label: 'Room Number'
+description: 'A unique identifier for each room.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 250
+  prefix: ''
+  suffix: ''
+field_type: integer

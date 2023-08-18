@@ -1,0 +1,21 @@
+uuid: b8eebdf9-f291-47e7-9f13-95ace489be45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_notes
+    - node.type.room
+  module:
+    - text
+id: node.room.field_additional_notes
+field_name: field_additional_notes
+entity_type: node
+bundle: room
+label: 'Additional Notes'
+description: 'Any additional information or notes related to the room.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

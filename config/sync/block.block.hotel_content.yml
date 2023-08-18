@@ -1,0 +1,22 @@
+uuid: ac83ba33-7746-4c88-988f-ea07ad2d8921
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hotel
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: hotel_content
+theme: hotel
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
