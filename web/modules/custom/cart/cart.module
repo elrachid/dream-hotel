@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Provides custom functionality for the Cart module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cart_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.cart':
+      return '<p>' . t('Help text for the Cart module.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function cart_permission() {
+  return [
+    'access cart' => [
+      'title' => t('Access Cart'),
+      'description' => t('Access the cart contents.'),
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cart_theme($existing, $type, $theme, $path) {
+  return [
+    'cart_block' => [
+      'variables' => [],
+      'template' => 'cart-block',
+    ],
+  ];
+}

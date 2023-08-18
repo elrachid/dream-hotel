@@ -1,0 +1,22 @@
+# This theme is marked as @internal. It is intended to evolve and change over
+# minor releases.
+# As the UI of Drupal improves between minor versions, the markup and assets in
+# the Olivero theme will change. The Olivero theme is not backwards compatible
+# If you wish to modify the output or assets of Olivero you can:
+# 1. Copy the whole of Olivero and rename it as your own theme. You will need to
+# manually manage your own updates if you want to stay up to date with Olivero's
+# bug fixes and feature support.
+#
+# 2. Sub-theme Olivero. This is only recommended if you want to make minor
+# tweaks and understand that Olivero could break your modifications as it
+# changes.
+name: hotel
+type: theme
+base theme: olivero
+description: 'A clean, accessible, and flexible Drupal front-end theme.'
+alt text: 'Screenshot of Olivero, Drupal front-end theme.'
+package: Custom
+version: VERSION
+core_version_requirement: ^8 || ^9 || ^10
+libraries:
+  - hotel/global-styling
