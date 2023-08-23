@@ -1,0 +1,23 @@
+uuid: cdfb1e1f-c453-41ea-aa59-288245753854
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_capacity
+id: commerce_product.room.field_capacity
+field_name: field_capacity
+entity_type: commerce_product
+bundle: room
+label: Capacity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 4
+  prefix: ''
+  suffix: ''
+field_type: integer

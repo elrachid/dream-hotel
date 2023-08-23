@@ -1,0 +1,21 @@
+uuid: 09ebf9ce-31f1-48ed-81eb-1f3cbe48d614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone_number_alt
+    - node.type.booking
+_core:
+  default_config_hash: xuDGRFaAWkfsJ3y2dtrjd4dlxZPrTeDwgaWYvTHyFW0
+id: node.booking.field_phone_number_alt
+field_name: field_phone_number_alt
+entity_type: node
+bundle: booking
+label: 'Alternative phone number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

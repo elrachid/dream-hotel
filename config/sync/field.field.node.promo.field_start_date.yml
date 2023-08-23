@@ -1,0 +1,26 @@
+uuid: fb8bce3c-0f14-48f3-ae00-21648c40da75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date
+    - node.type.promo
+  module:
+    - datetime
+_core:
+  default_config_hash: 7urX_xRSkELxLT3Xuk5ohguRWwaXXr-8PfykwrrvklM
+id: node.promo.field_start_date
+field_name: field_start_date
+entity_type: node
+bundle: promo
+label: 'Validity start date'
+description: 'The date after which the promo can be used.'
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

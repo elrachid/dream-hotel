@@ -1,0 +1,23 @@
+uuid: 926a415d-fd95-452a-abe6-1b15061a7461
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_promotion
+id: commerce_product.room.field_promotion
+field_name: field_promotion
+entity_type: commerce_product
+bundle: room
+label: Promotion
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

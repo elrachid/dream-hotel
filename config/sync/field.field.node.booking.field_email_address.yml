@@ -1,0 +1,21 @@
+uuid: b171fdbd-6988-4f66-9663-bc9114b4b2d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email_address
+    - node.type.booking
+_core:
+  default_config_hash: cchcD6BXcb2zAW9YHkX7cTHRktErwYAEYOx7J8d1Jvk
+id: node.booking.field_email_address
+field_name: field_email_address
+entity_type: node
+bundle: booking
+label: 'Email address'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

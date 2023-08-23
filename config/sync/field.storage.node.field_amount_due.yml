@@ -1,0 +1,22 @@
+uuid: f6fcef98-3bdc-41ee-8bc0-de59814f4868
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: sr307LHGk8WM1642vTy9pN1k8s51k6Uqn1Zc2cCBICw
+id: node.field_amount_due
+field_name: field_amount_due
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

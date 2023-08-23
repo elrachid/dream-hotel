@@ -1,0 +1,25 @@
+uuid: bdfd3494-88ce-4f77-88e1-8e3b8b3e8f0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amount
+    - node.type.line_item
+_core:
+  default_config_hash: H3JuhUcGcbC-QfPzaoB6jE4Eb8wEsy1Tdh_6qdYd5vk
+id: node.line_item.field_amount
+field_name: field_amount
+entity_type: node
+bundle: line_item
+label: Amount
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 1000000
+  prefix: ''
+  suffix: ''
+field_type: decimal

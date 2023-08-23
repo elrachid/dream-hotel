@@ -1,0 +1,20 @@
+uuid: e825b0c0-a93c-4fd1-8e92-2a0a94a07131
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_capacity
+field_name: field_capacity
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

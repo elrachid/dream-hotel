@@ -1,0 +1,27 @@
+uuid: 4d895caf-99ea-4654-a7a7-2005b4269837
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_min_nights
+    - node.type.bookable_unit
+_core:
+  default_config_hash: fDv2ERdmuNGiWxL5lrm4vssEyyKeNMQlDFZ4ta9Qutw
+id: node.bookable_unit.field_min_nights
+field_name: field_min_nights
+entity_type: node
+bundle: bookable_unit
+label: 'Minimum nights'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 2
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: nights
+field_type: integer

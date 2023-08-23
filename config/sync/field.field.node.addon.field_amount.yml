@@ -1,0 +1,25 @@
+uuid: b5417f01-ec13-4bf7-bb16-372400ddf9f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amount
+    - node.type.addon
+_core:
+  default_config_hash: pWw3GveRZyeBRNBGEvyTZf80yQuoe4JvpINQB39z95U
+id: node.addon.field_amount
+field_name: field_amount
+entity_type: node
+bundle: addon
+label: Amount
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,47 @@
+uuid: 02b5f453-6ec2-42f6-adf2-454ed12ef1f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bookable_unit.body
+    - field.field.node.bookable_unit.field_addons
+    - field.field.node.bookable_unit.field_checkin_time
+    - field.field.node.bookable_unit.field_checkout_time
+    - field.field.node.bookable_unit.field_max_guests
+    - field.field.node.bookable_unit.field_min_guests
+    - field.field.node.bookable_unit.field_min_nights
+    - field.field.node.bookable_unit.field_price_type
+    - node.type.bookable_unit
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: L34M0oH7JpKDQ0fXAnylNF_TQBCDWvfsi0pnKdcANrU
+id: node.bookable_unit.teaser
+targetEntityType: node
+bundle: bookable_unit
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_addons: true
+  field_checkin_time: true
+  field_checkout_time: true
+  field_max_guests: true
+  field_min_guests: true
+  field_min_nights: true
+  field_price_type: true

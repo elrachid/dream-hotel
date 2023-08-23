@@ -1,0 +1,10 @@
+uuid: dd9e13f7-8660-4d0d-913a-79a177d5c17f
+langcode: en
+status: true
+dependencies: {  }
+id: room
+label: Room
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

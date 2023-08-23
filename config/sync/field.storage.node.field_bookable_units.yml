@@ -1,0 +1,21 @@
+uuid: 0ea335ee-0e74-4bbf-a488-c1f5c77f5132
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: albrRv24TzOgbD7cTEbPknenW6wjmdQkQhvCeMzTXa4
+id: node.field_bookable_units
+field_name: field_bookable_units
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

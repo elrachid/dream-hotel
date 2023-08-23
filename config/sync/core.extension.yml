@@ -10,6 +10,7 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  cart: 0
   ckeditor: 0
   color: 0
   comment: 0
@@ -17,6 +18,7 @@ module:
   commerce_add_to_cart_link: 0
   commerce_cart: 0
   commerce_checkout: 0
+  commerce_invoice: 0
   commerce_log: 0
   commerce_number_pattern: 0
   commerce_order: 0
@@ -33,6 +35,7 @@ module:
   devel: 0
   devel_entity_updates: 0
   devel_generate: 0
+  devel_generate_commerce: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -40,6 +43,7 @@ module:
   entity_print_views: 0
   entity_reference_revisions: 0
   field: 0
+  field_slideshow: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -57,7 +61,9 @@ module:
   path_alias: 0
   profile: 0
   rdf: 0
+  rest: 0
   search: 0
+  serialization: 0
   shortcut: 0
   state_machine: 0
   system: 0
@@ -69,6 +75,7 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  views_bulk_operations: 0
   views_ui: 0
   views: 10
   standard: 1000

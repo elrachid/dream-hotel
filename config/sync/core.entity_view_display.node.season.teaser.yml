@@ -1,0 +1,31 @@
+uuid: 55018e96-d069-4db1-81b6-cb110f5cfe7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.season.field_bookable_units
+    - field.field.node.season.field_end_date
+    - field.field.node.season.field_seasonal_price
+    - field.field.node.season.field_start_date
+    - node.type.season
+  module:
+    - user
+_core:
+  default_config_hash: tc11tDFvQPxjfcXXOlO9D9k9pyOCeY1rE4kOiASxdvg
+id: node.season.teaser
+targetEntityType: node
+bundle: season
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_bookable_units: true
+  field_end_date: true
+  field_seasonal_price: true
+  field_start_date: true

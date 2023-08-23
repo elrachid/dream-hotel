@@ -1,0 +1,27 @@
+uuid: e26e4681-35a4-4c6f-abe8-5b15b7ff697b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_num_guests
+    - node.type.booking
+_core:
+  default_config_hash: dPndT5XwTaJoAFF36mIbZ7D5Cf0HzWkfhTgoZ5gGlS0
+id: node.booking.field_num_guests
+field_name: field_num_guests
+entity_type: node
+bundle: booking
+label: 'Number of guests'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: 1000
+  prefix: ''
+  suffix: ''
+field_type: integer

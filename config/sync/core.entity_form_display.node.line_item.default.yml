@@ -1,0 +1,68 @@
+uuid: d912ab60-ccfc-4bac-b86c-836314db0fae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.line_item.field_amount
+    - field.field.node.line_item.field_booking
+    - field.field.node.line_item.field_date
+    - field.field.node.line_item.field_type
+    - node.type.line_item
+  module:
+    - datetime
+_core:
+  default_config_hash: Cy7Rs4ZnQ5Gp-ZC3CrkIrJMStcu5Ir1T5zkNJedV_e4
+id: node.line_item.default
+targetEntityType: node
+bundle: line_item
+mode: default
+content:
+  field_amount:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_booking:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_date:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

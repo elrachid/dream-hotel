@@ -1,0 +1,21 @@
+uuid: e1bd4162-313a-42cf-a40d-415855f70c16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_name
+    - node.type.booking
+_core:
+  default_config_hash: G2fwabejuTwuqiSd7pHclGZaqAAxK_zZXZu4uLvDEmY
+id: node.booking.field_first_name
+field_name: field_first_name
+entity_type: node
+bundle: booking
+label: 'First name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 2bddcc97-596f-44e7-b5b2-e6fc89c3c769
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_floor
+id: commerce_product.room.field_floor
+field_name: field_floor
+entity_type: commerce_product
+bundle: room
+label: Floor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 20
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,18 @@
+uuid: 1202c4df-7bf9-4213-b44f-4775e111bd9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_availability
+field_name: field_availability
+entity_type: commerce_product
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

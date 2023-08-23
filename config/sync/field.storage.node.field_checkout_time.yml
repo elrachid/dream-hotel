@@ -1,0 +1,23 @@
+uuid: 00e50691-9424-4c7a-b294-ca00fabac254
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 8oh5k4gyMPlV7EBsYqk2X5SiBzjQvm2oo6Hbi925iwU
+id: node.field_checkout_time
+field_name: field_checkout_time
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

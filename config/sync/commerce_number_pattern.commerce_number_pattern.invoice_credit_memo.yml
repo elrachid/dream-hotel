@@ -1,0 +1,18 @@
+uuid: 6bfa1e1d-4de1-4904-9d1d-4b7f25c76918
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_invoice
+_core:
+  default_config_hash: ljZ14iTDPhrHMp9-aB_vmQIB86s5FODIcHPM295o1yM
+id: invoice_credit_memo
+label: 'Credit memo'
+targetEntityType: commerce_invoice
+plugin: infinite
+configuration:
+  pattern: '[pattern:number]'
+  initial_number: 1
+  padding: 0
+  per_store_sequence: true

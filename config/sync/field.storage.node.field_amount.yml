@@ -1,0 +1,22 @@
+uuid: d5056f51-179b-45f1-852b-1b778cf027ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ZoseteNTE_53Za1Iu3PuYFZ7c5O716OPVIMns5nONjw
+id: node.field_amount
+field_name: field_amount
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

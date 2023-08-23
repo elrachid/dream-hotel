@@ -1,0 +1,20 @@
+uuid: 6a34538f-2ea8-485b-9731-0b3af560f93f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: oD1JeTl3DIa8VIYbeCBaVjNvbtH3BS3qLBlUBJbJKUY
+name: Promotion
+type: promo
+description: 'A discounted price that guests can apply to their booking with a special code.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

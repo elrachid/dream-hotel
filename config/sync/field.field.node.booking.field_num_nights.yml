@@ -1,0 +1,27 @@
+uuid: 970a36b7-9f88-4a2e-9137-3d9acddac47c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_num_nights
+    - node.type.booking
+_core:
+  default_config_hash: NjdAs1eyocHOzrt8Sgt0nx7JjTIIu3F5Vdh1yZXSZ3o
+id: node.booking.field_num_nights
+field_name: field_num_nights
+entity_type: node
+bundle: booking
+label: 'Number of nights'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: 1000
+  prefix: ''
+  suffix: ''
+field_type: integer

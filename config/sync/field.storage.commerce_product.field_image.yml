@@ -1,0 +1,30 @@
+uuid: 142539a6-ef1f-4226-a873-ffafc14de839
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - file
+    - image
+id: commerce_product.field_image
+field_name: field_image
+entity_type: commerce_product
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: a45d1242-8364-4f98-ab87-00d1c5ef24a8
+    alt: ''
+    title: ''
+    width: 950
+    height: 650
+module: image
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

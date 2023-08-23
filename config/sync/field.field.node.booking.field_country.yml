@@ -1,0 +1,23 @@
+uuid: 5b025b1b-1ba0-446b-a80a-481799a6c8f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.booking
+  module:
+    - options
+_core:
+  default_config_hash: FNg0IIvdlCGxpdvCE_aGZQgboaQl48SCjTbIKs3jScY
+id: node.booking.field_country
+field_name: field_country
+entity_type: node
+bundle: booking
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

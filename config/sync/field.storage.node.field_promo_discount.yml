@@ -1,0 +1,22 @@
+uuid: 3e8d52b5-f60b-4214-863e-39049842db1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 2GpWGoBUIsx5C9I5fCbgoXfO7MactdmscN7BrDboblI
+id: node.field_promo_discount
+field_name: field_promo_discount
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

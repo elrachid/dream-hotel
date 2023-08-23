@@ -1,0 +1,19 @@
+uuid: 8152a2f9-38dc-4cd8-a264-3b6b43045814
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: AznSE-mY9ML4dt9EEeTPMqqkTw1lajPWsg2X4fE2a6c
+name: 'Line item'
+type: line_item
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

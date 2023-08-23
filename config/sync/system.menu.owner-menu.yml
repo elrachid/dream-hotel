@@ -1,0 +1,10 @@
+uuid: 78cb5d3d-daab-488d-9373-1947f6b61bf4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: r77iiF_n3ywysnN2dEtOfTas14JjLlvK61lbzxnkMHg
+id: owner-menu
+label: 'Owner menu'
+description: 'Administrative task links for the site owner'
+locked: false

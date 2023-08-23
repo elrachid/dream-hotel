@@ -1,0 +1,14 @@
+uuid: 5749f4dd-3e87-4d12-ae79-0fd55bc245de
+langcode: en
+status: true
+dependencies: {  }
+id: room
+label: Room
+traits: {  }
+locked: false
+description: ''
+variationType: room
+variationTypes:
+  - room
+multipleVariations: false
+injectVariationFields: false

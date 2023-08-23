@@ -1,0 +1,23 @@
+uuid: 0a35c0da-b755-4e47-b934-97f81604c1e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_max_adulte
+id: commerce_product.room.field_max_adulte
+field_name: field_max_adulte
+entity_type: commerce_product
+bundle: room
+label: 'Max adulte'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 4
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,20 @@
+uuid: a4e80d62-4799-4b99-9c6d-ce3e1f84a790
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product.field_bed_types
+field_name: field_bed_types
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

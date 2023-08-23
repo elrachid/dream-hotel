@@ -1,0 +1,29 @@
+uuid: a040105a-9dd2-4025-ba38-d64b654b47d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_bed_types
+    - taxonomy.vocabulary.bed_types
+id: commerce_product.room.field_bed_types
+field_name: field_bed_types
+entity_type: commerce_product
+bundle: room
+label: 'Bed Types'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bed_types: bed_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

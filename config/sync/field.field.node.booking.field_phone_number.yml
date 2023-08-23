@@ -1,0 +1,21 @@
+uuid: a670ae93-0b98-42b1-8a32-0bccebf411d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone_number
+    - node.type.booking
+_core:
+  default_config_hash: J0MV4xh6CudVM22tn8McqlI9hn3cRjXLc31kHvz00eU
+id: node.booking.field_phone_number
+field_name: field_phone_number
+entity_type: node
+bundle: booking
+label: 'Phone number'
+description: 'Start with your country dialing code; eg. "+27" for South Africa.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

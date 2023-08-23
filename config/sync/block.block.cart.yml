@@ -1,4 +1,4 @@
-uuid: 0331a45b-a5c4-41f2-9429-dec7a7923881
+uuid: 0611127d-17cd-4ad2-bf4f-4a36ab19bc60
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - hotel
 id: cart
 theme: hotel
-region: content
+region: secondary_menu
 weight: 0
 provider: null
 plugin: commerce_cart

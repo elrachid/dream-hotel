@@ -1,0 +1,20 @@
+uuid: 863b3446-2015-4279-8a55-767c96e30d1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bookable_unit
+_core:
+  default_config_hash: 7gKrf0FgN9waAhuFHseEGzbxD8GDGttyNDVtVrEXBCw
+id: node.bookable_unit.title
+field_name: title
+entity_type: node
+bundle: bookable_unit
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

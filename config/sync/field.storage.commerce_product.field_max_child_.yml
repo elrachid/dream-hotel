@@ -1,0 +1,20 @@
+uuid: c3ea6c4f-48ac-485e-b234-ee106e2febf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_max_child_
+field_name: field_max_child_
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

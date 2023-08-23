@@ -1,0 +1,30 @@
+uuid: 55afdf47-ac9e-4558-a8ac-89980f98a825
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_addons
+    - node.type.addon
+    - node.type.booking
+_core:
+  default_config_hash: w-oYkztFbNVxOqqsmZru0ujObsHdWsgrCV1BP0OjPrM
+id: node.booking.field_addons
+field_name: field_addons
+entity_type: node
+bundle: booking
+label: Addons
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      addon: addon
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

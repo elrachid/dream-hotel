@@ -1,0 +1,23 @@
+uuid: 89cc0c18-f385-4024-b9c9-f36d75d681e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date
+    - node.type.season
+  module:
+    - datetime
+_core:
+  default_config_hash: YaAbo1cCrKHM3uSVXqvjxIxyWUx--YU0vT6m8hRO848
+id: node.season.field_start_date
+field_name: field_start_date
+entity_type: node
+bundle: season
+label: 'Start date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

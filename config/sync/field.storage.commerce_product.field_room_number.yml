@@ -1,0 +1,20 @@
+uuid: 7c6d776e-166c-4af3-83d6-3569f8b58791
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_room_number
+field_name: field_room_number
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

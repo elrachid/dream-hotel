@@ -1,0 +1,27 @@
+uuid: 1b62515b-fe69-42f4-a84e-96e88fdd620b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_max_guests
+    - node.type.bookable_unit
+_core:
+  default_config_hash: taML0Ka27QwHeeqpqpFYGk-Ovg78SNx48DLy9bnRdKI
+id: node.bookable_unit.field_max_guests
+field_name: field_max_guests
+entity_type: node
+bundle: bookable_unit
+label: 'Guest capacity'
+description: 'The maximum number of guests that can be accommodated.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 2
+default_value_callback: ''
+settings:
+  min: 1
+  max: 1000
+  prefix: ''
+  suffix: ''
+field_type: integer

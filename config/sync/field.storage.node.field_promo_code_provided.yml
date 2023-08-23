@@ -1,0 +1,23 @@
+uuid: 73a3c1ce-2f62-4440-a0fd-6a7a807144ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: nxW4vlkjKYGR2iZYa-5Y-3KDytIDK_MVR0CQgS6q0wI
+id: node.field_promo_code_provided
+field_name: field_promo_code_provided
+entity_type: node
+type: string
+settings:
+  max_length: 50
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

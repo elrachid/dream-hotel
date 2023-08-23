@@ -1,0 +1,21 @@
+uuid: 4dca6890-0098-497c-a221-0a758b0e0e69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes
+    - node.type.booking
+_core:
+  default_config_hash: LkZbN5vp3l21cRUyO_0KmtaZY0o5lIKWMg6H5pHPoZ4
+id: node.booking.field_notes
+field_name: field_notes
+entity_type: node
+bundle: booking
+label: 'Comments or special requests'
+description: 'Any additional information about the booking, such as special requests, house-keeping requirements, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

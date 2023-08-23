@@ -1,0 +1,21 @@
+uuid: a252c67e-1b35-4969-9a5c-22bfd54c34b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_name
+    - node.type.booking
+_core:
+  default_config_hash: hmPg5JRsi6mKzq-VnGlzoiB8hBkPprK0qY32uzupego
+id: node.booking.field_last_name
+field_name: field_last_name
+entity_type: node
+bundle: booking
+label: 'Last name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 32562efc-91fa-473a-b43f-78252a3fc333
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 5pIV5PJPcqJC3aL8Z_qu5SDDGfeqjEP9AAsSyOW0tFU
+id: node.field_num_nights
+field_name: field_num_nights
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

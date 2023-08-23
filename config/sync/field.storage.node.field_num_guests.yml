@@ -1,0 +1,22 @@
+uuid: a7180a9d-c137-4a1b-933f-413ad3215a41
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: id9_cn5jeXnpLBQLcF_0t4m63KPn2DnL1ILFuAdZUmI
+id: node.field_num_guests
+field_name: field_num_guests
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
