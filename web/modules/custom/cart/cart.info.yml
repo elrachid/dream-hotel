@@ -1,7 +1,9 @@
 name: 'Cart'
 type: module
-description: 'Provides a cart block.'
+description: 'Provides a cart custom block.'
 core_version_requirement: ^8 || ^9
 package: Custom
 dependencies:
   - drupal:entity
+libraries:
+  - cart/global-styling
