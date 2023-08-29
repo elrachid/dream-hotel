@@ -20,6 +20,7 @@
         "drupal/commerce": "^2.36",
         "drupal/commerce_add_to_cart_link": "^2.0",
         "drupal/commerce_invoice": "^2.0@RC",
+        "drupal/commerce_stock": "^1.1",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",

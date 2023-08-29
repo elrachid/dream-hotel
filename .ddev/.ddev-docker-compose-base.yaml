@@ -8,14 +8,14 @@ services:
       context: './.dbimageBuild'
       args:
         BASE_IMAGE: $DDEV_DBIMAGE
-        username: 'mac'
+        username: 'elfakhar'
         uid: '501'
         gid:  20 
     image: ${DDEV_DBIMAGE}-${DDEV_SITENAME}-built
     cap_add:
       - SYS_NICE
     stop_grace_period: 60s
-    working_dir: "/home/mac"
+    working_dir: "/home/elfakhar"
     volumes:
       - type: "volume"
         source: "database"
@@ -42,6 +42,7 @@ services:
     environment:
       - COLUMNS
       - DDEV_DATABASE
+      - DDEV_DATABASE_FAMILY
       - DDEV_HOSTNAME
       - DDEV_PHP_VERSION
       - DDEV_PRIMARY_URL
@@ -67,14 +68,14 @@ services:
       - POSTGRES_USER=db
       - POSTGRES_DB=db
       - TZ=
-      - USER=mac
+      - USER=elfakhar
     command: ${DDEV_DB_CONTAINER_COMMAND}
     healthcheck:
       
       interval: 1s
       retries: 120
       start_period: 120s
-      timeout: 120s
+      timeout: "120s"
    
 
   web:
@@ -83,14 +84,14 @@ services:
       context: './.webimageBuild'
       args:
         BASE_IMAGE: $DDEV_WEBIMAGE
-        username: 'mac'
+        username: 'elfakhar'
         uid: '501'
         gid: '20'
         DDEV_PHP_VERSION: ${DDEV_PHP_VERSION}
     image: ${DDEV_WEBIMAGE}-${DDEV_SITENAME}-built
+    command: /pre-start.sh
     
 
-    
     networks: ["default", "ddev_default"]
     cap_add:
       - SYS_PTRACE
@@ -99,24 +100,28 @@ services:
     
 
     volumes:
-      
-      - type: bind
-        source: ../
-        target: /var/www/html
-         
-        consistency: cached
-         
        
       
-      
-      - ".:/mnt/ddev_config:ro"
-      - "./xhprof:/usr/local/bin/xhprof:ro"
-         
-       
-      - "ddev-global-cache:/mnt/ddev-global-cache"
-      
-      - "ddev-ssh-agent_socket_dir:/home/.ssh-agent"
-      
+      # For mutagen, mount a directory higher in /var/www so that we can use
+      # stageMode: "neighboring"
+      - type: volume
+        source: project_mutagen
+        target: /var/www
+        volume:
+          nocopy: true
+      # This second mutagen mount is only to make just the volume available so it can be chowned
+      # without accidentally also hitting docker mounts
+      - type: volume
+        source: project_mutagen
+        target: /tmp/project_mutagen
+        volume:
+          nocopy: true
+      - .:/mnt/ddev_config:ro
+      - ./xhprof:/usr/local/bin/xhprof:ro
+      - /Users/elfakhar/projects/dream-hotel/web/sites/default/files:/var/www/html/web/sites/default/files:rw
+      - ../.git:/var/www/html/.git:rw
+      - ddev-global-cache:/mnt/ddev-global-cache
+      - ddev-ssh-agent_socket_dir:/home/.ssh-agent
 
     restart: "no"
     user: '$DDEV_UID:$DDEV_GID'
@@ -132,6 +137,7 @@ services:
     - DDEV_COMPOSER_ROOT
     - DDEV_DATABASE
     - DDEV_DOCROOT
+    - DDEV_DATABASE_FAMILY
     - DDEV_HOSTNAME
     - DDEV_MUTAGEN_ENABLED
     - DDEV_PHP_VERSION
@@ -143,6 +149,8 @@ services:
     - DDEV_SITENAME
     - DDEV_TLD
     - DDEV_FILES_DIR
+    - DDEV_FILES_DIRS
+    - DDEV_WEB_ENTRYPOINT=/mnt/ddev_config/web-entrypoint.d
     - DDEV_WEBSERVER_TYPE
     - DDEV_XDEBUG_ENABLED
     - DDEV_VERSION
@@ -174,7 +182,7 @@ services:
     - PHP_IDE_CONFIG=serverName=${DDEV_SITENAME}.${DDEV_TLD}
     - SSH_AUTH_SOCK=/home/.ssh-agent/socket
     - TZ=
-    - USER=mac
+    - USER=elfakhar
     - VIRTUAL_HOST=${DDEV_HOSTNAME}
     
     labels:
@@ -184,6 +192,7 @@ services:
       com.ddev.approot: $DDEV_APPROOT
 
       
+
       
     external_links:
       - "ddev-router:dream-hotel.ddev.site"
@@ -193,37 +202,8 @@ services:
       interval: 1s
       retries: 120
       start_period: 120s
-      timeout: 120s
+      timeout: "120s"
 
-  
-  dba:
-    container_name: ddev-${DDEV_SITENAME}-dba
-    image: $DDEV_DBAIMAGE
-    working_dir: "/root"
-    restart: "no"
-    labels:
-      com.ddev.site-name: ${DDEV_SITENAME}
-      com.ddev.platform: ddev
-      com.ddev.app-type: drupal9
-      com.ddev.approot: $DDEV_APPROOT
-    expose:
-      - "80"
-     
-    hostname: dream-hotel-dba
-    environment:
-    - PMA_USER=root
-    - PMA_PASSWORD=root
-    - VIRTUAL_HOST=$DDEV_HOSTNAME
-    - UPLOAD_LIMIT=1024M
-    - TZ=
-    # HTTP_EXPOSE allows for ports accepting HTTP traffic to be accessible from <site>.ddev.site:<port>
-    - HTTP_EXPOSE=${DDEV_PHPMYADMIN_PORT}:80
-    - HTTPS_EXPOSE=${DDEV_PHPMYADMIN_HTTPS_PORT}:80
-    healthcheck:
-      interval: 120s
-      timeout: 2s
-      retries: 1
-    
 networks:
   ddev_default:
     name: ddev_default
@@ -236,7 +216,7 @@ volumes:
     name: "dream-hotel-mariadb"
     external: true
    
-  
+
    
 
   
@@ -248,4 +228,9 @@ volumes:
     external: true
   
   
+  
+  project_mutagen:
+    name: dream-hotel_project_mutagen
+    external: true
+
   

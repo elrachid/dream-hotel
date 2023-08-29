@@ -9,19 +9,20 @@ services:
     db:
         build:
             args:
-                BASE_IMAGE: drud/ddev-dbserver-mariadb-10.4:v1.21.5
+                BASE_IMAGE: ddev/ddev-dbserver-mariadb-10.4:v1.22.0
                 gid: "20"
                 uid: "501"
-                username: mac
-            context: /Users/mac/projects/dream-hotel/.ddev/.dbimageBuild
+                username: elfakhar
+            context: /Users/elfakhar/projects/dream-hotel/.ddev/.dbimageBuild
             dockerfile: Dockerfile
         cap_add:
             - SYS_NICE
         command: []
         container_name: ddev-dream-hotel-db
         environment:
-            COLUMNS: "186"
+            COLUMNS: "198"
             DDEV_DATABASE: mariadb:10.4
+            DDEV_DATABASE_FAMILY: mysql
             DDEV_HOSTNAME: dream-hotel.ddev.site
             DDEV_PHP_VERSION: "8.1"
             DDEV_PRIMARY_URL: http://dream-hotel.ddev.site
@@ -32,7 +33,7 @@ services:
             DDEV_SITENAME: dream-hotel
             DDEV_TLD: ddev.site
             DOCKER_IP: 127.0.0.1
-            GOARCH: arm64
+            GOARCH: amd64
             GOOS: darwin
             HOST_DOCKER_INTERNAL_IP: ""
             IS_DDEV_PROJECT: "true"
@@ -47,17 +48,17 @@ services:
             POSTGRES_PASSWORD: db
             POSTGRES_USER: db
             TZ: ""
-            USER: mac
+            USER: elfakhar
         healthcheck:
             interval: 1s
             retries: 120
             start_period: 2m0s
             timeout: 2m0s
         hostname: dream-hotel-db
-        image: drud/ddev-dbserver-mariadb-10.4:v1.21.5-dream-hotel-built
+        image: ddev/ddev-dbserver-mariadb-10.4:v1.22.0-dream-hotel-built
         labels:
             com.ddev.app-type: drupal9
-            com.ddev.approot: /Users/mac/projects/dream-hotel
+            com.ddev.approot: /Users/elfakhar/projects/dream-hotel
             com.ddev.platform: ddev
             com.ddev.site-name: dream-hotel
         networks:
@@ -67,7 +68,7 @@ services:
             - host_ip: 127.0.0.1
               mode: ingress
               protocol: tcp
-              published: "62582"
+              published: "56815"
               target: 3306
         restart: "no"
         stop_grace_period: 1m0s
@@ -80,68 +81,44 @@ services:
                 nocopy: true
             - bind:
                 create_host_path: true
-              source: /Users/mac/projects/dream-hotel/.ddev
+              source: /Users/elfakhar/projects/dream-hotel/.ddev
               target: /mnt/ddev_config
               type: bind
             - bind:
                 create_host_path: true
-              source: /Users/mac/projects/dream-hotel/.ddev/db_snapshots
+              source: /Users/elfakhar/projects/dream-hotel/.ddev/db_snapshots
               target: /mnt/snapshots
               type: bind
             - source: ddev-global-cache
               target: /mnt/ddev-global-cache
               type: volume
               volume: {}
-        working_dir: /home/mac
-    dba:
-        container_name: ddev-dream-hotel-dba
-        environment:
-            HTTP_EXPOSE: 8036:80
-            HTTPS_EXPOSE: 8037:80
-            PMA_PASSWORD: root
-            PMA_USER: root
-            TZ: ""
-            UPLOAD_LIMIT: 1024M
-            VIRTUAL_HOST: dream-hotel.ddev.site
-        expose:
-            - "80"
-        healthcheck:
-            interval: 2m0s
-            retries: 1
-            timeout: 2s
-        hostname: dream-hotel-dba
-        image: phpmyadmin:5
-        labels:
-            com.ddev.app-type: drupal9
-            com.ddev.approot: /Users/mac/projects/dream-hotel
-            com.ddev.platform: ddev
-            com.ddev.site-name: dream-hotel
-        networks:
-            ddev_default: null
-            default: null
-        restart: "no"
-        working_dir: /root
+        working_dir: /home/elfakhar
     web:
         build:
             args:
-                BASE_IMAGE: drud/ddev-webserver:v1.21.5
+                BASE_IMAGE: ddev/ddev-webserver:20230803_php_serialize_precision
                 DDEV_PHP_VERSION: "8.1"
                 gid: "20"
                 uid: "501"
-                username: mac
-            context: /Users/mac/projects/dream-hotel/.ddev/.webimageBuild
+                username: elfakhar
+            context: /Users/elfakhar/projects/dream-hotel/.ddev/.webimageBuild
             dockerfile: Dockerfile
         cap_add:
             - SYS_PTRACE
+        command:
+            - /pre-start.sh
         container_name: ddev-dream-hotel-web
         environment:
-            COLUMNS: "186"
+            COLUMNS: "198"
             DDEV_COMPOSER_ROOT: /var/www/html
             DDEV_DATABASE: mariadb:10.4
+            DDEV_DATABASE_FAMILY: mysql
             DDEV_DOCROOT: web
             DDEV_FILES_DIR: /var/www/html/web/sites/default/files
+            DDEV_FILES_DIRS: /var/www/html/web/sites/default/files
             DDEV_HOSTNAME: dream-hotel.ddev.site
-            DDEV_MUTAGEN_ENABLED: "false"
+            DDEV_MUTAGEN_ENABLED: "true"
             DDEV_PHP_VERSION: "8.1"
             DDEV_PRIMARY_URL: http://dream-hotel.ddev.site
             DDEV_PROJECT: dream-hotel
@@ -150,7 +127,8 @@ services:
             DDEV_ROUTER_HTTPS_PORT: "443"
             DDEV_SITENAME: dream-hotel
             DDEV_TLD: ddev.site
-            DDEV_VERSION: v1.21.6
+            DDEV_VERSION: v1.22.1
+            DDEV_WEB_ENTRYPOINT: /mnt/ddev_config/web-entrypoint.d
             DDEV_WEBSERVER_TYPE: nginx-fpm
             DDEV_XDEBUG_ENABLED: "false"
             DEPLOY_NAME: local
@@ -158,7 +136,7 @@ services:
             DOCROOT: web
             DRUSH_ALLOW_XDEBUG: "1"
             DRUSH_OPTIONS_URI: http://dream-hotel.ddev.site
-            GOARCH: arm64
+            GOARCH: amd64
             GOOS: darwin
             HOST_DOCKER_INTERNAL_IP: ""
             HTTP_EXPOSE: 80:80,8025:8025
@@ -175,7 +153,7 @@ services:
             PHP_IDE_CONFIG: serverName=dream-hotel.ddev.site
             SSH_AUTH_SOCK: /home/.ssh-agent/socket
             TZ: ""
-            USER: mac
+            USER: elfakhar
             VIRTUAL_HOST: dream-hotel.ddev.site
             npm_config_cache: /mnt/ddev-global-cache/npm
         external_links:
@@ -186,10 +164,10 @@ services:
             start_period: 2m0s
             timeout: 2m0s
         hostname: dream-hotel-web
-        image: drud/ddev-webserver:v1.21.5-dream-hotel-built
+        image: ddev/ddev-webserver:20230803_php_serialize_precision-dream-hotel-built
         labels:
             com.ddev.app-type: drupal9
-            com.ddev.approot: /Users/mac/projects/dream-hotel
+            com.ddev.approot: /Users/elfakhar/projects/dream-hotel
             com.ddev.platform: ddev
             com.ddev.site-name: dream-hotel
         networks:
@@ -207,21 +185,37 @@ services:
         restart: "no"
         user: "501:20"
         volumes:
-            - consistency: cached
-              source: ../
-              target: /var/www/html
-              type: bind
+            - source: project_mutagen
+              target: /var/www
+              type: volume
+              volume:
+                nocopy: true
+            - source: project_mutagen
+              target: /tmp/project_mutagen
+              type: volume
+              volume:
+                nocopy: true
             - bind:
                 create_host_path: true
               read_only: true
-              source: /Users/mac/projects/dream-hotel/.ddev
+              source: /Users/elfakhar/projects/dream-hotel/.ddev
               target: /mnt/ddev_config
               type: bind
             - bind:
                 create_host_path: true
               read_only: true
-              source: /Users/mac/projects/dream-hotel/.ddev/xhprof
+              source: /Users/elfakhar/projects/dream-hotel/.ddev/xhprof
               target: /usr/local/bin/xhprof
+              type: bind
+            - bind:
+                create_host_path: true
+              source: /Users/elfakhar/projects/dream-hotel/web/sites/default/files
+              target: /var/www/html/web/sites/default/files
+              type: bind
+            - bind:
+                create_host_path: true
+              source: /Users/elfakhar/projects/dream-hotel/.git
+              target: /var/www/html/.git
               type: bind
             - source: ddev-global-cache
               target: /mnt/ddev-global-cache
@@ -242,3 +236,6 @@ volumes:
     ddev-ssh-agent_socket_dir:
         external: true
         name: ddev-ssh-agent_socket_dir
+    project_mutagen:
+        external: true
+        name: dream-hotel_project_mutagen
