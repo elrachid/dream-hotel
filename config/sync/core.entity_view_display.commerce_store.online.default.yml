@@ -15,15 +15,18 @@ mode: default
 content:
   address:
     type: address_default
-    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   billing_countries: true
   created: true
   default_currency: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   is_default: true
   mail: true
   name: true

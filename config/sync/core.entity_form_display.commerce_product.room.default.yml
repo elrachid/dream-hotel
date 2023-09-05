@@ -19,10 +19,12 @@ dependencies:
     - field.field.commerce_product.room.field_room_number
     - field.field.commerce_product.room.field_room_type
     - field.field.commerce_product.room.field_size
+    - field.field.commerce_product.room.field_stock_level
     - image.style.thumbnail
   module:
     - commerce
     - commerce_product
+    - commerce_stock_field
     - image
     - path
     - text
@@ -155,6 +157,15 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_stock_level:
+    type: commerce_stock_level_simple_transaction
+    weight: 106
+    region: content
+    settings:
+      step: '1'
+      custom_transaction_note: false
+      default_transaction_note: 'Transaction issued by stock level field.'
     third_party_settings: {  }
   path:
     type: path

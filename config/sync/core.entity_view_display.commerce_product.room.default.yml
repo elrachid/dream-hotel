@@ -19,8 +19,10 @@ dependencies:
     - field.field.commerce_product.room.field_room_number
     - field.field.commerce_product.room.field_room_type
     - field.field.commerce_product.room.field_size
+    - field.field.commerce_product.room.field_stock_level
   module:
     - commerce_product
+    - commerce_stock_field
     - field_slideshow
     - text
 id: commerce_product.room.default
@@ -183,6 +185,13 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 26
+    region: content
+  field_stock_level:
+    type: commerce_stock_level_simple
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
     region: content
   title:
     type: string
